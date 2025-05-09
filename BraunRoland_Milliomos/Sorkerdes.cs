@@ -25,5 +25,10 @@ namespace BraunRoland_Milliomos
 		public List<string> Valaszok { get => valaszok; set => valaszok = value; }
 		public string Helyes { get => helyes; set => helyes = value; }
 		public string Kategoria { get => kategoria; set => kategoria = value; }
+
+		public override string ToString()
+		{
+			return $"{kerdes};{valaszok};{helyes};{kategoria}";
+		}
 	}
 }

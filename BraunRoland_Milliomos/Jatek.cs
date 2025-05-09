@@ -35,6 +35,10 @@
 			}
 			sr.Close();
 		
+			Console.WriteLine("Üdvözöllek a Milliomos játékban, " + nev + "!");
+			Console.WriteLine("Sorkérdés:");
+			Random rnd = new Random();
+			Sorkerdes ez = sorkerdesek[rnd.Next(0, sorkerdesek.Count)];
 		}
 	}
 }
