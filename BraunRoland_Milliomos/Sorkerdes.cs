@@ -6,27 +6,24 @@ using System.Threading.Tasks;
 
 namespace BraunRoland_Milliomos
 {
-	internal class Kerdesek
+	internal class Sorkerdes
 	{
-		int nehezseg;
 		string kerdes;
-		private List<string> valaszok;
-		char helyes;
+		List<string> valaszok;
+		string helyes;
 		string kategoria;
 
-		public Kerdesek(string kerdes, List<string> valaszok, char helyes, string kategoria, int nehezseg)
+		public Sorkerdes(string kerdes, List<string> valaszok, string helyes, string kategoria)
 		{
 			this.kerdes = kerdes;
 			this.valaszok = valaszok;
 			this.helyes = helyes;
 			this.kategoria = kategoria;
-			this.nehezseg = nehezseg;
 		}
 
 		public string Kerdes { get => kerdes; set => kerdes = value; }
 		public List<string> Valaszok { get => valaszok; set => valaszok = value; }
-		public char Helyes { get => helyes; set => helyes = value; }
+		public string Helyes { get => helyes; set => helyes = value; }
 		public string Kategoria { get => kategoria; set => kategoria = value; }
-		public int Nehezseg { get => nehezseg; set => nehezseg = value; }
 	}
 }
