@@ -34,11 +34,33 @@
 				sorkerdesek.Add(sorkerdes);
 			}
 			sr.Close();
-		
-			Console.WriteLine("Üdvözöllek a Milliomos játékban, " + nev + "!");
+
+			//foreach(var item in kerdesek)
+			//{
+			//	foreach( var kerdes in item.Valaszok)
+			//	{
+			//		Console.Write(kerdes);
+			//		Console.Write(", ");
+			//	}
+			//	Console.WriteLine();
+			//}
+
+			Console.WriteLine("Üdvözöllek a Legyen Ön Is Milliómos játékban, " + nev + "!");
 			Console.WriteLine("Sorkérdés:");
 			Random rnd = new Random();
 			Sorkerdes ez = sorkerdesek[rnd.Next(0, sorkerdesek.Count)];
+			Console.WriteLine($"Kategória: {ez.Kategoria}");
+			Console.WriteLine(ez.Kerdes);
+			Console.WriteLine($"A: {ez.Valaszok[0]}");
+			Console.WriteLine($"B: {ez.Valaszok[1]}");
+			Console.WriteLine($"C: {ez.Valaszok[2]}");
+			Console.WriteLine($"D: {ez.Valaszok[3]}");
+			Console.Write("Csak a Betűket add meg!: ");
+			string valasz = Console.ReadLine();
+			if ( valasz.ToUpper() = ez.Helyes)
+			{
+
+			}
 		}
 	}
 }
