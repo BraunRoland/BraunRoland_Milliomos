@@ -10,11 +10,13 @@
 		}
 
 		public string Nev { get => nev; set => nev = value; }
+		
+		Random rnd = new Random();
+		List<Kerdes> kerdesek = new List<Kerdes>();
+		List<Sorkerdes> sorkerdesek = new List<Sorkerdes>();
 
 		public void Sorkerdes()
 		{
-			List<Kerdes> kerdesek = new List<Kerdes>();
-			List<Sorkerdes> sorkerdesek = new List<Sorkerdes>();
 			StreamReader sr = new("kerdes.txt");
 			while (!sr.EndOfStream)
 			{
@@ -47,7 +49,6 @@
 
 			Console.WriteLine("Üdvözöllek a Legyen Ön Is Milliómos játékban, " + nev + "!");
 			Console.WriteLine("Sorkérdés:");
-			Random rnd = new Random();
 			Sorkerdes ez = sorkerdesek[rnd.Next(0, sorkerdesek.Count)];
 			Console.WriteLine($"Kategória: {ez.Kategoria}");
 			Console.WriteLine(ez.Kerdes);
@@ -74,8 +75,11 @@
 
 		static void Kerdesek()
 		{
-			int[] garantalt = [250000, 2000000];
-			int nyeremenyek 0
+			int[] nyeremenyek = [1, 2, 5, 10, 25, 50, 75, 100, 150, 200, 500, 1000, 1500, 2500, 5000];
+			for (int i = 0; i < nyeremenyek.Length; i++)
+			{
+				
+			}
 		}
 	}
 }
