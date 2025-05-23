@@ -11,12 +11,12 @@
 
 		public string Nev { get => nev; set => nev = value; }
 		
-		Random rnd = new Random();
-		List<Kerdes> kerdesek = new List<Kerdes>();
-		List<Sorkerdes> sorkerdesek = new List<Sorkerdes>();
 
 		public void Sorkerdes()
 		{
+			Random rnd = new Random();
+			List<Kerdes> kerdesek = new List<Kerdes>();
+			List<Sorkerdes> sorkerdesek = new List<Sorkerdes>();
 			StreamReader sr = new("kerdes.txt");
 			while (!sr.EndOfStream)
 			{
@@ -73,12 +73,24 @@
 			}
 		}
 
-		static void Kerdesek()
+		static void Kerdesek(List <Kerdes> kerdesek)
 		{
+			Random rnd = new Random();
+			List <Kerdes>jelenlegiKor = new List <Kerdes>();
 			int[] nyeremenyek = [1, 2, 5, 10, 25, 50, 75, 100, 150, 200, 500, 1000, 1500, 2500, 5000];
-			for (int i = 0; i < nyeremenyek.Length; i++)
+			for (int i = 0; i < nyeremenyek.Length; i++) //jatekkörök
 			{
-				
+				jelenlegiKor.Clear();
+				for (int j = 0; j < kerdesek.Count; j++)
+				{
+					if (kerdesek[j].Nehezseg == i+1)
+					{
+						jelenlegiKor.Add(jelenlegiKor[j]);
+					}
+				}
+				Console.WriteLine($"{i + 1}. kör. Nyeremény: {nyeremenyek[i] * 1000} Ft");
+				Kerdes ez = jelenlegiKor[rnd.Next(0, jelenlegiKor.Count)];
+
 			}
 		}
 	}
