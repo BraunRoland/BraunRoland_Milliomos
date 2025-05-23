@@ -11,7 +11,7 @@
 
 		public string Nev { get => nev; set => nev = value; }
 
-		public void Inditas()
+		public void Sorkerdes()
 		{
 			List<Kerdes> kerdesek = new List<Kerdes>();
 			List<Sorkerdes> sorkerdesek = new List<Sorkerdes>();
@@ -57,10 +57,25 @@
 			Console.WriteLine($"D: {ez.Valaszok[3]}");
 			Console.Write("Csak a Betűket add meg!: ");
 			string valasz = Console.ReadLine();
-			if ( valasz.ToUpper() = ez.Helyes)
+			if (valasz.ToUpper() == ez.Helyes)
 			{
-
+				Console.WriteLine("Gratulálok! Tovább haladsz az igazi kérdésekhez!");
 			}
+			else
+			{
+				Console.WriteLine($"Sajnos nem Talált. A helyes válasz: {ez.Helyes}\nSzeretnéd újrapróbálni?(igen/nem): ");
+				string ujrakezd = Console.ReadLine();
+				if (ujrakezd.ToLower() == "igen" || ujrakezd.ToLower() == "i")
+				{
+					Sorkerdes();
+				}
+			}
+		}
+
+		static void Kerdesek()
+		{
+			int[] garantalt = [250000, 2000000];
+			int nyeremenyek 0
 		}
 	}
 }

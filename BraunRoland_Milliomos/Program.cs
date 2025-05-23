@@ -5,7 +5,8 @@
 		static void Main(string[] args)
 		{
 			Jatek jatek = new Jatek("Roland");
-			jatek.Inditas();
+			jatek.Sorkerdes();
+
 		}	
 	}
 }
